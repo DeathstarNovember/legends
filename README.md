@@ -12,7 +12,6 @@ To install dependencies and configure your project:
 
 - Install Elixir dependencies with `mix deps.get`.
 - `cd` to the `assets/` directory and run `yarn` (or `npm install`) to install Node.js dependencies.
-- Modify the database settings in each `config/` files according to your needs.
 - Create and migrate your database with `mix ecto.setup` (this runs `mix ecto.create`, `mix ecto.migrate` and `mix run priv/repo/seeds.exs` in order)
 
 To start your Phoenix server:
