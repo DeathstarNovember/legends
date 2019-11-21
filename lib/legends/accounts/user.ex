@@ -2,10 +2,13 @@ defmodule Legends.Accounts.User do
   use Ecto.Schema
   import Ecto.Changeset
 
+  alias Legends.Stories.Post
+
 
   schema "users" do
     field :email, :string
     field :name, :string
+    has_many :posts, Post
 
     timestamps()
   end

@@ -10,6 +10,13 @@ defmodule LegendsWeb.Schema.AccountTypes do
     field :id, :id
     field :name, :string
     field :email, :string
+    field :posts, list_of(:post) do
+      resolve(
+        assoc(:posts, fn posts_query, _args, _context ->
+          posts_query
+        end)
+      )
+    end
   end
 
   object :account_queries do
